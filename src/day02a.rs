@@ -10,9 +10,9 @@ pub fn run() {
         let tokens: Vec<&str> = line.split(" ").collect();
         let (dir, value) = (tokens[0], tokens[1].parse::<i32>().unwrap());
         match dir {
-            "forward" => pos += value,
-            "down" => depth += value,
             "up" => depth -= value,
+            "down" => depth += value,
+            "forward" => pos += value,
             _ => panic!("eek")
         }
     }

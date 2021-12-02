@@ -11,12 +11,12 @@ pub fn run() {
         let tokens: Vec<&str> = line.split(" ").collect();
         let (dir, value) = (tokens[0], tokens[1].parse::<i32>().unwrap());
         match dir {
+            "up" => aim -= value,
+            "down" => aim += value,
             "forward" => {
                 pos += value;
                 depth += aim * value;
             },
-            "down" => aim += value,
-            "up" => aim -= value,
             _ => panic!("eek")
         }
     }
