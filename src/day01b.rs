@@ -1,6 +1,5 @@
 use std::fs;
 
-// iterate over sliding window of size 3, count number of times the triplet sum is larger than the previous triplet
 pub fn run() {
     let content: String = fs::read_to_string("input/day01").unwrap();
     let numbers: Vec<i32> = content.lines().map(|l| l.parse().unwrap()).collect();
